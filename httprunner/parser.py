@@ -881,7 +881,7 @@ def __prepare_config(config, project_mapping, session_variables_set=None):
     # get config variables
     raw_config_variables = config.pop("variables", {})
     raw_config_variables_mapping = utils.ensure_mapping_format(raw_config_variables)
-    override_variables = utils.deepcopy_dict(project_mapping.get("variables", {}))
+    override_variables = utils.deepcopy_dict(project_mapping.get("env", {}))
     functions = project_mapping.get("functions", {})
 
     # override config variables with passed in variables
@@ -929,8 +929,8 @@ def __prepare_testcase_tests(tests, config, project_mapping, session_variables_s
         # 1, testcase config => testcase tests
         # override test_dict variables
         test_dict_variables = utils.extend_variables(
-            test_dict.pop("variables", {}),
-            config_variables
+            config_variables,
+            test_dict.pop("variables", {})
         )
         test_dict["variables"] = test_dict_variables
 

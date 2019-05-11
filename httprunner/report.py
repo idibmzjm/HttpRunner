@@ -299,7 +299,7 @@ def render_html_report(summary, report_template=None, report_dir=None):
     start_at_timestamp = int(summary["time"]["start_at"])
     summary["time"]["start_datetime"] = datetime.fromtimestamp(start_at_timestamp).strftime('%Y-%m-%d %H:%M:%S')
 
-    report_path = os.path.join(report_dir, "{}.html".format(start_at_timestamp))
+    report_path = os.path.join(report_dir, "{}.html".format(summary["time"]["start_datetime"]))
 
     with io.open(report_template, "r", encoding='utf-8') as fp_r:
         template_content = fp_r.read()
