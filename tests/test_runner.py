@@ -1,7 +1,7 @@
 import os
 import time
 
-from httprunner import loader, parser, runner
+from apiautotest import loader, parser, runner
 from tests.api_server import HTTPBIN_SERVER
 from tests.base import ApiServerUnittest
 

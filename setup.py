@@ -8,7 +8,7 @@ from setuptools import Command, find_packages, setup
 
 about = {}
 here = os.path.abspath(os.path.dirname(__file__))
-with io.open(os.path.join(here, 'httprunner', '__about__.py'), encoding='utf-8') as f:
+with io.open(os.path.join(here, 'apiautotest', '__about__.py'), encoding='utf-8') as f:
     exec(f.read(), about)
 
 with io.open("README.md", encoding='utf-8') as f:
@@ -81,7 +81,7 @@ setup(
     packages=find_packages(exclude=["examples", "tests", "tests.*"]),
     package_data={
         '': ["README.md"],
-        'httprunner': ["templates/*"],
+        'apiautotest': ["templates/*"],
     },
     keywords='HTTP api test requests locust',
     install_requires=install_requires,
@@ -96,10 +96,10 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'ate=httprunner.cli:main_hrun',
-            'httprunner=httprunner.cli:main_hrun',
-            'hrun=httprunner.cli:main_hrun',
-            'locusts=httprunner.cli:main_locust'
+            'ate=apiautotest.cli:main_hrun',
+            'apiautotest=apiautotest.cli:main_hrun',
+            'hrun=apiautotest.cli:main_hrun',
+            'locusts=apiautotest.cli:main_locust'
         ]
     },
     # $ setup.py upload support.

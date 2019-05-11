@@ -1,52 +1,52 @@
 ## Installation
 
-`HttpRunner` is available on [`PyPI`][PyPI] and can be installed through pip or easy_install.
+`apiautotest` is available on [`PyPI`][PyPI] and can be installed through pip or easy_install.
 
 ```bash
-$ pip install HttpRunner
+$ pip install apiautotest
 ```
 
 or
 
 ```bash
-$ easy_install HttpRunner
+$ easy_install apiautotest
 ```
 
 If you want to keep up with the latest version, you can install with github repository url.
 
 ```bash
-$ pip install git+https://github.com/HttpRunner/HttpRunner.git#egg=HttpRunner
+$ pip install git+https://github.com/apiautotest/apiautotest.git#egg=apiautotest
 ```
 
 ## Upgrade
 
-If you have installed `HttpRunner` before and want to upgrade to the latest version, you can use the `-U` option.
+If you have installed `apiautotest` before and want to upgrade to the latest version, you can use the `-U` option.
 
 This option works on each installation method described above.
 
 ```bash
-$ pip install -U HttpRunner
-$ easy_install -U HttpRunner
-$ pip install -U git+https://github.com/HttpRunner/HttpRunner.git#egg=HttpRunner
+$ pip install -U apiautotest
+$ easy_install -U apiautotest
+$ pip install -U git+https://github.com/apiautotest/apiautotest.git#egg=apiautotest
 ```
 
 ## Check Installation
 
-When HttpRunner is installed, a **httprunner** (**hrun** for short) command should be available in your shell (if you're not using
+When apiautotest is installed, a **apiautotest** (**hrun** for short) command should be available in your shell (if you're not using
 virtualenv—which you should—make sure your python script directory is on your path).
 
-To see `HttpRunner` version:
+To see `apiautotest` version:
 
 ```bash
-$ httprunner -V     # same as: hrun -V
-HttpRunner version: 0.8.1b
+$ apiautotest -V     # same as: hrun -V
+apiautotest version: 0.8.1b
 PyUnitReport version: 0.1.3b
 ```
 
 To see available options, run:
 
 ```bash
-$ httprunner -h     # same as: hrun -h
+$ apiautotest -h     # same as: hrun -h
 usage: main-debug.py [-h] [-V] [--no-html-report]
                      [--html-report-name HTML_REPORT_NAME]
                      [--html-report-template HTML_REPORT_TEMPLATE]
@@ -88,9 +88,9 @@ optional arguments:
 
 ## Supported Python Versions
 
-HttpRunner supports Python 2.7, 3.4, 3.5, and 3.6. And we strongly recommend you to use `Python 3.6`.
+apiautotest supports Python 2.7, 3.4, 3.5, and 3.6. And we strongly recommend you to use `Python 3.6`.
 
-`HttpRunner` has been tested on `macOS`, `Linux` and `Windows` platforms.
+`apiautotest` has been tested on `macOS`, `Linux` and `Windows` platforms.
 
 
 [PyPI]: https://pypi.python.org/pypi

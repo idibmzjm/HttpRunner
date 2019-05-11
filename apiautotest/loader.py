@@ -8,7 +8,7 @@ import os
 import sys
 
 import yaml
-from httprunner import built_in, exceptions, logger, parser, utils, validator
+from apiautotest import built_in, exceptions, logger, parser, utils, validator
 
 ###############################################################################
 ##   file loader

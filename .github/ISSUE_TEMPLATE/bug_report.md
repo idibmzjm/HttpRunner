@@ -14,7 +14,7 @@ Please complete the following information:
 
  - OS: [e.g. macos, Linux, Windows]
  - Python [e.g. 3.6]
- - HttpRunner [e.g. 1.5.11]
+ - apiautotest [e.g. 1.5.11]
 
 ## Traceback
 

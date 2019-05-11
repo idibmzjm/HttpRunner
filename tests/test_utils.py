@@ -2,7 +2,7 @@ import io
 import os
 import shutil
 
-from httprunner import exceptions, loader, parser, utils
+from apiautotest import exceptions, loader, parser, utils
 from tests.base import ApiServerUnittest
 
 
@@ -62,7 +62,7 @@ class TestUtils(ApiServerUnittest):
         self.assertEqual(result, "L")
 
     def current_validators(self):
-        from httprunner import built_in
+        from apiautotest import built_in
         functions_mapping = loader.load_module_functions(built_in)
 
         functions_mapping["equals"](None, None)

@@ -3,8 +3,8 @@
 If there is something goes wrong in installation like below.
 
 ```text
-Downloading/unpacking PyUnitReport (from HttpRunner)
-  Could not find any downloads that satisfy the requirement PyUnitReport (from HttpRunner)
+Downloading/unpacking PyUnitReport (from apiautotest)
+  Could not find any downloads that satisfy the requirement PyUnitReport (from apiautotest)
 ```
 
 You could install `PyUnitReport` manully at first.
@@ -13,8 +13,8 @@ You could install `PyUnitReport` manully at first.
 $ pip install git+https://github.com/debugtalk/PyUnitReport.git#egg=PyUnitReport
 ```
 
-And then everything will be OK when you reinstall `HttpRunner`.
+And then everything will be OK when you reinstall `apiautotest`.
 
 ```bash
-$ pip install git+https://github.com/debugtalk/HttpRunner.git#egg=HttpRunner
+$ pip install git+https://github.com/debugtalk/apiautotest.git#egg=apiautotest
 ```

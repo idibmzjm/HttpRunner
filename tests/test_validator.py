@@ -1,6 +1,6 @@
 import unittest
 
-from httprunner import validator
+from apiautotest import validator
 
 
 class TestValidator(unittest.TestCase):

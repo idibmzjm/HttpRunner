@@ -10,15 +10,15 @@ from collections import Iterable
 from datetime import datetime
 
 import requests
-from httprunner import loader, logger
-from httprunner.__about__ import __version__
-from httprunner.compat import basestring, bytes, json, numeric_types
+from apiautotest import loader, logger
+from apiautotest.__about__ import __version__
+from apiautotest.compat import basestring, bytes, json, numeric_types
 from jinja2 import Template, escape
 
 
 def get_platform():
     return {
-        "httprunner_version": __version__,
+        "apiautotest_version": __version__,
         "python_version": "{} {}".format(
             platform.python_implementation(),
             platform.python_version()

@@ -4,8 +4,8 @@ import ast
 import os
 import re
 
-from httprunner import exceptions, utils, validator
-from httprunner.compat import basestring, builtin_str, numeric_types, str
+from apiautotest import exceptions, utils, validator
+from apiautotest.compat import basestring, builtin_str, numeric_types, str
 
 # use $$ to escape $ notation
 dolloar_regex_compile = re.compile(r"\$\$")
@@ -261,15 +261,15 @@ def get_mapping_function(function_name, functions_mapping):
         return functions_mapping[function_name]
 
     elif function_name in ["parameterize", "P"]:
-        from httprunner import loader
+        from apiautotest import loader
         return loader.load_csv_file
 
     elif function_name in ["environ", "ENV"]:
         return utils.get_os_environ
 
     try:
-        # check if HttpRunner builtin functions
-        from httprunner import loader
+        # check if apiautotest builtin functions
+        from apiautotest import loader
         built_in_functions = loader.load_builtin_functions()
         return built_in_functions[function_name]
     except KeyError:

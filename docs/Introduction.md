@@ -17,12 +17,12 @@ Take full reuse of Python's existing powerful libraries: [`Requests`][requests],
 
 ## Learn more
 
-You can read this [blog][HttpRunner-blog] to learn more about the background and initial thoughts of `HttpRunner`.
+You can read this [blog][apiautotest-blog] to learn more about the background and initial thoughts of `apiautotest`.
 
 
 [requests]: http://docs.python-requests.org/en/master/
 [unittest]: https://docs.python.org/3/library/unittest.html
 [Locust]: http://locust.io/
-[PyUnitReport]: https://github.com/HttpRunner/PyUnitReport
+[PyUnitReport]: https://github.com/apiautotest/PyUnitReport
 [Jenkins]: https://jenkins.io/index.html
-[HttpRunner-blog]: http://debugtalk.com/post/ApiTestEngine-api-test-best-practice/
+[apiautotest-blog]: http://debugtalk.com/post/ApiTestEngine-api-test-best-practice/

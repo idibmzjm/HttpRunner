@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 """
-httprunner.compat
+apiautotest.compat
 ~~~~~~~~~~~~~~~~~
 
 This module handles import compatibility issues between Python 2 and

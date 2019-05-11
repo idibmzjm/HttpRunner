@@ -1,4 +1,4 @@
-site_name: HttpRunner Docs
+site_name: apiautotest Docs
 pages:
     - index.md
     - Introduction.md

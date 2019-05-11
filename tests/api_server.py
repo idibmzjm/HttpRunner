@@ -4,7 +4,7 @@ import json
 from functools import wraps
 
 from flask import Flask, make_response, request
-from httprunner.built_in import gen_random_string
+from apiautotest.built_in import gen_random_string
 
 try:
     from httpbin import app as httpbin_app

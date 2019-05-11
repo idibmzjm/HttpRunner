@@ -5,7 +5,7 @@ import json
 import os
 import types
 
-from httprunner import exceptions, logger
+from apiautotest import exceptions, logger
 
 
 """ validate data format

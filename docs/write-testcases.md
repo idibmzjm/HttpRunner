@@ -58,7 +58,7 @@ For detailed regulations of writing testcases, you can read the [`quickstart`](q
 
 ## Comparator
 
-`HttpRunner` currently supports the following comparators.
+`apiautotest` currently supports the following comparators.
 
 | comparator | Description | A(check), B(expect) | examples |
 | -- | -- | -- | -- |

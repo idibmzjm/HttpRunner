@@ -1,11 +1,11 @@
 import sys
 
-from httprunner.cli import main_hrun, main_locust
-from httprunner.logger import color_print
+from apiautotest.cli import main_hrun, main_locust
+from apiautotest.logger import color_print
 
 cmd = sys.argv.pop(1)
 
-if cmd in ["hrun", "httprunner", "ate"]:
+if cmd in ["hrun", "apiautotest", "ate"]:
     main_hrun()
 elif cmd in ["locust", "locusts"]:
     main_locust()

@@ -10,9 +10,9 @@ import re
 import string
 from datetime import datetime
 
-from httprunner import exceptions, logger
-from httprunner.compat import basestring, bytes, is_py2
-from httprunner.exceptions import ParamsError
+from apiautotest import exceptions, logger
+from apiautotest.compat import basestring, bytes, is_py2
+from apiautotest.exceptions import ParamsError
 
 absolute_http_url_regexp = re.compile(r"^https?://", re.I)
 

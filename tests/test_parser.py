@@ -3,7 +3,7 @@ import re
 import time
 import unittest
 
-from httprunner import exceptions, loader, parser
+from apiautotest import exceptions, loader, parser
 from tests.debugtalk import gen_random_string, sum_two
 
 
@@ -699,7 +699,7 @@ class TestParserBasic(unittest.TestCase):
 
     def test_parse_variables_mapping_2(self):
         variables = {
-            "host2": "https://httprunner.org",
+            "host2": "https://apiautotest.org",
             "num3": "${sum_two($num2, 4)}",
             "num2": "${sum_two($num1, 3)}",
             "num1": "${sum_two(1, 2)}"
@@ -746,7 +746,7 @@ class TestParserBasic(unittest.TestCase):
 
     def test_prepare_lazy_data(self):
         variables = {
-            "host": "https://httprunner.org",
+            "host": "https://apiautotest.org",
             "num4": "${sum_two($num0, 5)}",
             "num3": "${sum_two($num2, 4)}",
             "num2": "${sum_two($num1, 3)}",
@@ -764,7 +764,7 @@ class TestParserBasic(unittest.TestCase):
 
     def test_prepare_lazy_data_not_found(self):
         variables = {
-            "host": "https://httprunner.org",
+            "host": "https://apiautotest.org",
             "num4": "${sum_two($num0, 5)}",
             "num3": "${sum_two($num2, 4)}",
             "num2": "${sum_two($num1, 3)}",
@@ -947,7 +947,7 @@ class TestParser(unittest.TestCase):
                     "teststeps": [
                         {
                             'name': 'testcase1',
-                            "base_url": "https://httprunner.org",
+                            "base_url": "https://apiautotest.org",
                             'request': {'url': '/api1', 'method': 'GET', "verify": True}
                         }
                     ]
@@ -974,7 +974,7 @@ class TestParser(unittest.TestCase):
                         {
                             'name': 'testcase1',
                             "variables": {
-                                "host2": "https://httprunner.org"
+                                "host2": "https://apiautotest.org"
                             },
                             'request': {'url': '$host2/api1', 'method': 'GET'}
                         }
@@ -984,9 +984,9 @@ class TestParser(unittest.TestCase):
         }
         parsed_testcases = parser.parse_tests(tests_mapping)
         test_dict = parsed_testcases[0]["teststeps"][0]
-        self.assertEqual(test_dict["variables"]["host2"], "https://httprunner.org")
+        self.assertEqual(test_dict["variables"]["host2"], "https://apiautotest.org")
         parsed_test_dict = parser.parse_lazy_data(test_dict, test_dict["variables"])
-        self.assertEqual(parsed_test_dict["request"]["url"], "https://httprunner.org/api1")
+        self.assertEqual(parsed_test_dict["request"]["url"], "https://apiautotest.org/api1")
 
     def test_parse_tests_base_url_test_dict(self):
         tests_mapping = {
@@ -1004,7 +1004,7 @@ class TestParser(unittest.TestCase):
                             'name': 'testcase1',
                             "base_url": "$host2",
                             "variables": {
-                                "host2": "https://httprunner.org"
+                                "host2": "https://apiautotest.org"
                             },
                             'request': {'url': '/api1', 'method': 'GET'}
                         }
@@ -1015,7 +1015,7 @@ class TestParser(unittest.TestCase):
         parsed_testcases = parser.parse_tests(tests_mapping)
         test_dict = parsed_testcases[0]["teststeps"][0]
         parsed_test_dict = parser.parse_lazy_data(test_dict, test_dict["variables"])
-        self.assertEqual(parsed_test_dict["base_url"], "https://httprunner.org")
+        self.assertEqual(parsed_test_dict["base_url"], "https://apiautotest.org")
 
     def test_parse_tests_variable_with_function(self):
         tests_mapping = {
@@ -1041,7 +1041,7 @@ class TestParser(unittest.TestCase):
                             'name': 'testcase1',
                             "base_url": "$host2",
                             "variables": {
-                                "host2": "https://httprunner.org",
+                                "host2": "https://apiautotest.org",
                                 "num3": "${sum_two($num2, 4)}",
                                 "num2": "${sum_two($num1, 3)}",
                                 "num1": "${sum_two(1, 2)}",
@@ -1063,7 +1063,7 @@ class TestParser(unittest.TestCase):
         self.assertEqual(variables["num3"], 10)
         self.assertEqual(variables["num2"], 6)
         parsed_test_dict = parser.parse_lazy_data(test_dict, variables)
-        self.assertEqual(parsed_test_dict["base_url"], "https://httprunner.org")
+        self.assertEqual(parsed_test_dict["base_url"], "https://apiautotest.org")
         self.assertEqual(
             parsed_test_dict["request"]["url"],
             "/api1/?num1=3&num2=6&num3=10"
@@ -1091,7 +1091,7 @@ class TestParser(unittest.TestCase):
                             'name': 'testcase1',
                             "base_url": "$host2",
                             "variables": {
-                                "host2": "https://httprunner.org",
+                                "host2": "https://apiautotest.org",
                                 "num4": "${sum_two($num0, 5)}",
                                 "num3": "${sum_two($num2, 4)}",
                                 "num2": "${sum_two($num1, 3)}",
@@ -1283,7 +1283,7 @@ class TestParser(unittest.TestCase):
             "variables": [
                 {"var": 123}
             ],
-            "base_url": "https://httprunner.org",
+            "base_url": "https://apiautotest.org",
             'request': {
                 'url': '/api/get-token',
                 'method': 'POST',

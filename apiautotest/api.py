@@ -3,15 +3,15 @@
 import os
 import unittest
 
-from httprunner import (exceptions, loader, logger, parser, report, runner,
+from apiautotest import (exceptions, loader, logger, parser, report, runner,
                         utils, validator)
 
 
-class HttpRunner(object):
+class apiautotest(object):
 
     def __init__(self, failfast=False, save_tests=False, report_template=None, report_dir=None,
         log_level="INFO", log_file=None):
-        """ initialize HttpRunner.
+        """ initialize apiautotest.
 
         Args:
             failfast (bool): stop the test run on the first error or failure.
@@ -22,7 +22,7 @@ class HttpRunner(object):
             log_file (str): log file path.
 
         """
-        self.exception_stage = "initialize HttpRunner()"
+        self.exception_stage = "initialize apiautotest()"
         kwargs = {
             "failfast": failfast,
             "resultclass": report.HtmlTestResult
@@ -238,7 +238,7 @@ class HttpRunner(object):
             mapping (dict): if mapping is specified, it will override variables in config block.
 
         Returns:
-            instance: HttpRunner() instance
+            instance: apiautotest() instance
 
         """
         # load tests

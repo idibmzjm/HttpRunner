@@ -13,8 +13,8 @@ import string
 import time
 
 import filetype
-from httprunner.compat import basestring, builtin_str, integer_types, str
-from httprunner.exceptions import ParamsError
+from apiautotest.compat import basestring, builtin_str, integer_types, str
+from apiautotest.exceptions import ParamsError
 from requests_toolbelt import MultipartEncoder
 
 PWD = os.getcwd()

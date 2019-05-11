@@ -2,9 +2,9 @@
 
 from unittest.case import SkipTest
 
-from httprunner import exceptions, logger, response, utils
-from httprunner.client import HttpSession
-from httprunner.context import SessionContext
+from apiautotest import exceptions, logger, response, utils
+from apiautotest.client import HttpSession
+from apiautotest.context import SessionContext
 
 
 class Runner(object):

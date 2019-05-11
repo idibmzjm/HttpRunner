@@ -14,7 +14,7 @@ about: 提交 bug 反馈
 
  - 操作系统类型: [e.g. macos, Linux, Windows]
  - Python 版本 [e.g. 3.6]
- - HttpRunner 版本 [e.g. 2.1.2]
+ - apiautotest 版本 [e.g. 2.1.2]
 
 ## 项目文件内容（非必须）
 
@@ -28,9 +28,9 @@ about: 提交 bug 反馈
 
 ```bash
 $ pwd
-/Users/debugtalk/MyProjects/HttpRunner-dev/httprunner/tests
+/Users/debugtalk/MyProjects/apiautotest-dev/apiautotest/tests
 $ hrun testcases/setup.yml
-INFO     Loading environment variables from /Users/debugtalk/MyProjects/HttpRunner-dev/HttpRunner/tests/.env
+INFO     Loading environment variables from /Users/debugtalk/MyProjects/apiautotest-dev/apiautotest/tests/.env
 ERROR    !!!!!!!!!! exception stage: load tests !!!!!!!!!!
 ModuleNotFoundError: No module named 'tests.api_server'
 ```

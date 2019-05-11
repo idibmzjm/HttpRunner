@@ -4,13 +4,13 @@ import shutil
 import time
 import unittest
 
-from httprunner import loader, parser
-from httprunner.api import HttpRunner, prepare_locust_tests
+from apiautotest import loader, parser
+from apiautotest.api import apiautotest, prepare_locust_tests
 from tests.api_server import HTTPBIN_SERVER
 from tests.base import ApiServerUnittest
 
 
-class TestHttpRunner(ApiServerUnittest):
+class Testapiautotest(ApiServerUnittest):
 
     def setUp(self):
         self.testcase_cli_path = "tests/data/demo_testcase_cli.yml"
@@ -67,7 +67,7 @@ class TestHttpRunner(ApiServerUnittest):
         self.tests_mapping = {
             "testcases": testcases
         }
-        self.runner = HttpRunner(failfast=True)
+        self.runner = apiautotest(failfast=True)
         self.reset_all()
 
     def reset_all(self):
@@ -148,7 +148,7 @@ class TestHttpRunner(ApiServerUnittest):
 
     def test_html_report(self):
         report_save_dir = os.path.join(os.getcwd(), 'reports', "demo")
-        runner = HttpRunner(failfast=True, report_dir=report_save_dir)
+        runner = apiautotest(failfast=True, report_dir=report_save_dir)
         runner.run(self.testcase_cli_path)
         summary = runner.summary
         self.assertEqual(summary["stat"]["testcases"]["total"], 1)
@@ -159,7 +159,7 @@ class TestHttpRunner(ApiServerUnittest):
 
     def test_log_file(self):
         log_file_path = os.path.join(os.getcwd(), 'reports', "test_log_file.log")
-        runner = HttpRunner(failfast=True, log_file=log_file_path)
+        runner = apiautotest(failfast=True, log_file=log_file_path)
         runner.run(self.testcase_cli_path)
         self.assertTrue(os.path.isfile(log_file_path))
         os.remove(log_file_path)
@@ -223,7 +223,7 @@ class TestHttpRunner(ApiServerUnittest):
 
     def test_html_report_repsonse_image(self):
         report_save_dir = os.path.join(os.getcwd(), 'reports', "demo")
-        runner = HttpRunner(failfast=True, report_dir=report_save_dir)
+        runner = apiautotest(failfast=True, report_dir=report_save_dir)
         report = runner.run("tests/httpbin/load_image.yml")
         self.assertTrue(os.path.isfile(report))
         shutil.rmtree(report_save_dir)
@@ -243,7 +243,7 @@ class TestHttpRunner(ApiServerUnittest):
         self.assertEqual(summary["stat"]["testcases"]["total"], 2)
         self.assertEqual(summary["stat"]["teststeps"]["total"], 4)
 
-    def test_run_httprunner_with_hooks(self):
+    def test_run_apiautotest_with_hooks(self):
         testcase_file_path = os.path.join(
             os.getcwd(), 'tests/httpbin/hooks.yml')
         start_time = time.time()
@@ -253,7 +253,7 @@ class TestHttpRunner(ApiServerUnittest):
         self.assertTrue(summary["success"])
         self.assertLess(end_time - start_time, 60)
 
-    def test_run_httprunner_with_teardown_hooks_alter_response(self):
+    def test_run_apiautotest_with_teardown_hooks_alter_response(self):
         testcases = [
             {
                 "config": {"name": "test teardown hooks"},
@@ -291,7 +291,7 @@ class TestHttpRunner(ApiServerUnittest):
         summary = self.runner.summary
         self.assertTrue(summary["success"])
 
-    def test_run_httprunner_with_teardown_hooks_not_exist_attribute(self):
+    def test_run_apiautotest_with_teardown_hooks_not_exist_attribute(self):
         testcases = [
             {
                 "config": {
@@ -325,7 +325,7 @@ class TestHttpRunner(ApiServerUnittest):
         self.assertFalse(summary["success"])
         self.assertEqual(summary["stat"]["teststeps"]["errors"], 1)
 
-    def test_run_httprunner_with_teardown_hooks_error(self):
+    def test_run_apiautotest_with_teardown_hooks_error(self):
         testcases = [
             {
                 "config": {
@@ -600,7 +600,7 @@ class TestApi(ApiServerUnittest):
         tests_mapping = loader.load_tests(testcase_path)
 
         testcases = parser.parse_tests(tests_mapping)
-        runner = HttpRunner()
+        runner = apiautotest()
         test_suite = runner._add_tests(testcases)
 
         self.assertEqual(len(test_suite._tests), 1)
@@ -630,7 +630,7 @@ class TestApi(ApiServerUnittest):
         testcase_path = "tests/testcases/setup.yml"
         tests_mapping = loader.load_tests(testcase_path)
         testcases = parser.parse_tests(tests_mapping)
-        runner = HttpRunner()
+        runner = apiautotest()
         test_suite = runner._add_tests(testcases)
         tests_results = runner._run_suite(test_suite)
         self.assertEqual(len(tests_results[0][1].records), 2)
@@ -639,7 +639,7 @@ class TestApi(ApiServerUnittest):
         testcase_path = "tests/testcases/create_user.yml"
         tests_mapping = loader.load_tests(testcase_path)
         testcases = parser.parse_tests(tests_mapping)
-        runner = HttpRunner()
+        runner = apiautotest()
         test_suite = runner._add_tests(testcases)
         tests_results = runner._run_suite(test_suite)
         self.assertEqual(len(tests_results[0][1].records), 2)
@@ -709,7 +709,7 @@ class TestApi(ApiServerUnittest):
         tests_mapping = loader.load_tests(testcase_path)
 
         testcases = parser.parse_tests(tests_mapping)
-        runner = HttpRunner()
+        runner = apiautotest()
         test_suite = runner._add_tests(testcases)
 
         self.assertEqual(len(test_suite._tests), 2)
@@ -722,7 +722,7 @@ class TestApi(ApiServerUnittest):
 
         testcases = parser.parse_tests(tests_mapping)
 
-        runner = HttpRunner()
+        runner = apiautotest()
         test_suite = runner._add_tests(testcases)
         tests_results = runner._run_suite(test_suite)
 

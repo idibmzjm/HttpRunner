@@ -15,6 +15,6 @@ install:
   - pipenv install --dev --skip-lock
 script:
   - pipenv run python setup.py install
-  - pipenv run coverage run --source=httprunner -m unittest discover
+  - pipenv run coverage run --source=apiautotest -m unittest discover
 after_success:
   - pipenv run coveralls

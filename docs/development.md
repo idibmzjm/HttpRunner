@@ -1,9 +1,9 @@
 ## Development
 
-To develop or debug `HttpRunner`, you shall clone source code first.
+To develop or debug `apiautotest`, you shall clone source code first.
 
 ```bash
-$ git clone https://github.com/HttpRunner/HttpRunner.git
+$ git clone https://github.com/apiautotest/apiautotest.git
 ```
 
 Then install all dependencies:

@@ -1,7 +1,7 @@
 import os
 import time
 
-from httprunner import context, exceptions, loader, parser, runner
+from apiautotest import context, exceptions, loader, parser, runner
 from tests.base import ApiServerUnittest, gen_md5, gen_random_string
 
 

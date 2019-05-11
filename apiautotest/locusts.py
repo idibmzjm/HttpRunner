@@ -5,8 +5,8 @@ import multiprocessing
 import os
 import sys
 
-from httprunner.logger import color_print
-from httprunner import loader
+from apiautotest.logger import color_print
+from apiautotest import loader
 
 
 def parse_locustfile(file_path):

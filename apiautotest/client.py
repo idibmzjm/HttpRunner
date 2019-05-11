@@ -4,8 +4,8 @@ import time
 
 import requests
 import urllib3
-from httprunner import logger
-from httprunner.utils import lower_dict_keys, omit_long_data
+from apiautotest import logger
+from apiautotest.utils import lower_dict_keys, omit_long_data
 from requests import Request, Response
 from requests.exceptions import (InvalidSchema, InvalidURL, MissingSchema,
                                  RequestException)
@@ -24,7 +24,7 @@ class ApiResponse(Response):
 class HttpSession(requests.Session):
     """
     Class for performing HTTP requests and holding (session-) cookies between requests (in order
-    to be able to log in and out of websites). Each request is logged so that HttpRunner can
+    to be able to log in and out of websites). Each request is logged so that apiautotest can
     display statistics.
 
     This is a slightly extended version of `python-request <http://python-requests.org>`_'s

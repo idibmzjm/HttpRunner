@@ -4,12 +4,12 @@ def main_hrun():
     """ API test: parse command line options and run commands.
     """
     import argparse
-    from httprunner import logger
-    from httprunner.__about__ import __description__, __version__
-    from httprunner.api import HttpRunner
-    from httprunner.compat import is_py2
-    from httprunner.validator import validate_json_file
-    from httprunner.utils import (create_scaffold, get_python2_retire_msg,
+    from apiautotest import logger
+    from apiautotest.__about__ import __description__, __version__
+    from apiautotest.api import apiautotest
+    from apiautotest.compat import is_py2
+    from apiautotest.validator import validate_json_file
+    from apiautotest.utils import (create_scaffold, get_python2_retire_msg,
                                 prettify_json_file)
 
     parser = argparse.ArgumentParser(description=__description__)
@@ -72,7 +72,7 @@ def main_hrun():
         create_scaffold(project_name)
         exit(0)
 
-    runner = HttpRunner(
+    runner = apiautotest(
         failfast=args.failfast,
         save_tests=args.save_tests,
         report_template=args.report_template,
@@ -96,10 +96,10 @@ def main_locust():
 
     import multiprocessing
     import sys
-    from httprunner import logger
+    from apiautotest import logger
 
     try:
-        from httprunner import locusts
+        from apiautotest import locusts
     except ImportError:
         msg = "Locust is not installed, install first and try again.\n"
         msg += "install command: pip install locustio"

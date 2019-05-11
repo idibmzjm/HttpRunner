@@ -2,7 +2,7 @@
 import os
 import unittest
 
-from httprunner import exceptions, loader, validator
+from apiautotest import exceptions, loader, validator
 
 
 class TestFileLoader(unittest.TestCase):
@@ -198,7 +198,7 @@ class TestModuleLoader(unittest.TestCase):
         self.assertNotIn("is_py3", module_functions)
 
     def test_load_debugtalk_module(self):
-        loader.load_project_tests(os.path.join(os.getcwd(), "httprunner"))
+        loader.load_project_tests(os.path.join(os.getcwd(), "apiautotest"))
         project_mapping = loader.project_mapping
         self.assertNotIn("alter_response", project_mapping["functions"])
 
@@ -229,7 +229,7 @@ class TestModuleLoader(unittest.TestCase):
         )
         self.assertIn("gen_md5", debugtalk_functions)
 
-        loader.load_project_tests("httprunner/__init__.py")
+        loader.load_project_tests("apiautotest/__init__.py")
         project_working_directory = loader.project_mapping["PWD"]
         debugtalk_functions = loader.project_mapping["functions"]
         self.assertEqual(

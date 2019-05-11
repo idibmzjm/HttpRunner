@@ -2,9 +2,9 @@ import logging
 import random
 
 import zmq
-from httprunner.exceptions import MyBaseError, MyBaseFailure
-from httprunner.api import prepare_locust_tests
-from httprunner.runner import Runner
+from apiautotest.exceptions import MyBaseError, MyBaseFailure
+from apiautotest.api import prepare_locust_tests
+from apiautotest.runner import Runner
 from locust import HttpLocust, TaskSet, task
 from locust.events import request_failure
 

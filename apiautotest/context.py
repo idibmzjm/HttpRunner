@@ -1,8 +1,8 @@
-from httprunner import exceptions, logger, parser, utils
+from apiautotest import exceptions, logger, parser, utils
 
 
 class SessionContext(object):
-    """ HttpRunner session, store runtime variables.
+    """ apiautotest session, store runtime variables.
 
     Examples:
         >>> variables = {"SECRET_KEY": "DebugTalk"}

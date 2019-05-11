@@ -15,7 +15,7 @@ log_colors_config = {
     'ERROR':    'red',
     'CRITICAL': 'red',
 }
-logger = logging.getLogger("httprunner")
+logger = logging.getLogger("apiautotest")
 
 
 def setup_logger(log_level, log_file=None):
