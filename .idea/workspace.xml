@@ -2,52 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2ba2703-91b3-43ce-9f9d-6096b12e4ff6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report_zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report_zh.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CNAME" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FAQ.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FAQ.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Installation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Installation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Introduction.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/development.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/development.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/quickstart.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/quickstart.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/run-testcases.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/run-testcases.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/write-testcases.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/write-testcases.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/__about__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/api.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/built_in.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/cli.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/client.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/compat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/context.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/exceptions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/locusts.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/logger.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/parser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/report.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/response.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/runner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/templates/locustfile_template" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/templates/report_template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/httprunner/validator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/main-debug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report_zh.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiautotest/__about__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiautotest/__about__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/api_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_context.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_context.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_validator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,39 +20,69 @@
     <session id="1663743489">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="3" />
+          <entry key="LICENSE" value="1" />
+          <entry key="PKG-INFO" value="2" />
+          <entry key="Pipfile" value="1" />
+          <entry key="locustfile_template" value="1" />
+          <entry key="md" value="1" />
+          <entry key="py" value="8" />
+          <entry key="txt" value="7" />
+          <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="3" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="Python" value="8" />
+          <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Python" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apiautotest/__about__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/setuptools/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1530">
+              <caret line="117" selection-start-line="117" selection-end-line="117" />
             </state>
           </provider>
         </entry>
@@ -115,6 +106,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/apiautotest/__about__.py" />
       </list>
     </option>
@@ -151,7 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,13 +152,24 @@
             </path>
             <path>
               <item name="HttpRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HttpRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="apiautotest" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="HttpRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="HttpRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,15 +208,9 @@
     <frame x="0" y="23" width="1280" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -222,11 +218,17 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32952693" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +240,67 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/apiautotest/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiautotest.egg-info/top_level.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiautotest/templates/locustfile_template">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main-debug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/setuptools/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiautotest.egg-info/requires.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiautotest.egg-info/PKG-INFO">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiautotest.egg-info/SOURCES.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiautotest.egg-info/entry_points.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiautotest.egg-info/dependency_links.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pipfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apiautotest/__about__.py">
       <provider selected="true" editor-type-id="text-editor">
