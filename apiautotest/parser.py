@@ -928,8 +928,9 @@ def __prepare_testcase_tests(tests, config, project_mapping, session_variables_s
 
         # 1, testcase config => testcase tests
         # override test_dict variables
+        config_variables_tmp = utils.deepcopy_dict(config_variables)
         test_dict_variables = utils.extend_variables(
-            config_variables,
+            config_variables_tmp,
             test_dict.pop("variables", {})
         )
         test_dict["variables"] = test_dict_variables
