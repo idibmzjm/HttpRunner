@@ -155,6 +155,7 @@ def parse_parameters(parameters, variables_mapping=None, functions_mapping=None)
     parsed_parameters_list = []
 
     parameters = utils.ensure_mapping_format(parameters)
+    cartesian = parameters.pop('cartesian', None)
     for parameter_name, parameter_content in parameters.items():
         parameter_name_list = parameter_name.split("-")
 
@@ -214,8 +215,10 @@ def parse_parameters(parameters, variables_mapping=None, functions_mapping=None)
                 parameter_content_list.append(parameter_dict)
 
         parsed_parameters_list.append(parameter_content_list)
-
-    return utils.gen_cartesian_product(*parsed_parameters_list)
+    if cartesian:
+        return utils.gen_cartesian_product(*parsed_parameters_list)
+    else:
+        return utils.gen_dict_from_zip(*parsed_parameters_list)
 
 
 ###############################################################################

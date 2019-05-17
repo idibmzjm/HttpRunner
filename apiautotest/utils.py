@@ -437,6 +437,53 @@ def create_scaffold(project_name):
         f.write(ignore_content)
 
 
+def update_to_dict(*args):
+    """
+    >>> args = (({"a": 1}, {"b": 1}),)
+    >>> update_to_dict(*args)
+    >>> result = {"a":1, "b":2}
+    :param args:
+    :return: result
+    """
+    tmp = dict()
+    for item in args[0]:
+        tmp.update(item)
+    return tmp
+
+
+def gen_dict_from_zip(*args):
+    """ generate dict for lists
+
+    Args:
+        args (list of list): lists to be generated with cartesian product
+
+    Returns:
+        list: cartesian product in list
+
+    Examples:
+
+        >>> arg1 = [{"a": 1}, {"a": 2}]
+        >>> arg2 = [{"x": 111, "y": 112}, {"x": 121, "y": 122}]
+        >>> args = [arg1, arg2]
+        >>> gen_dict_from_zip(*args)
+        >>> # same as below
+        >>> gen_dict_from_zip(arg1, arg2)
+            [
+                {'a': 1, 'x': 111, 'y': 112},
+                {'a': 2, 'x': 121, 'y': 122}
+            ]
+
+    """
+    if not args:
+        return []
+    elif len(args) == 1:
+        return args[0]
+
+    product_list = [product_item_tuple for product_item_tuple in map(update_to_dict, zip(*args))]
+
+    return product_list
+
+
 def gen_cartesian_product(*args):
     """ generate cartesian product for lists
 
