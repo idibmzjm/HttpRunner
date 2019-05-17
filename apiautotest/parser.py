@@ -1111,16 +1111,17 @@ def __get_parsed_testsuite_testcases(testcases, testsuite_config, project_mappin
 
         # 1, testsuite config => testcase config
         # override test_dict variables
+        testsuite_config_variables_tmp = utils.deepcopy_dict(testsuite_config_variables)
         testcase_config_variables = utils.extend_variables(
-            testcase.pop("variables", {}),
-            testsuite_config_variables
+            testsuite_config_variables_tmp,
+            testcase.pop("variables", {})
         )
 
         # 2, testcase config > testcase_def config
         # override testcase_def config variables
         overrided_testcase_config_variables = utils.extend_variables(
-            parsed_testcase["config"].pop("variables", {}),
-            testcase_config_variables
+            testcase_config_variables,
+            parsed_testcase["config"].pop("variables", {})
         )
 
         if overrided_testcase_config_variables:

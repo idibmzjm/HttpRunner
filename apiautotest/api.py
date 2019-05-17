@@ -109,6 +109,7 @@ class apiautotest(object):
         tests_results = []
 
         for testcase in test_suite:
+            testcase.runner.execute_hooks()
             testcase_name = testcase.config.get("name")
             logger.log_info("Start to run testcase: {}".format(testcase_name))
 

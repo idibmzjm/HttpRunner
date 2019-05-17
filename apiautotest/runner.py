@@ -66,15 +66,16 @@ class Runner(object):
         config_variables = config.get("variables", {})
 
         # testcase setup hooks
-        testcase_setup_hooks = config.get("setup_hooks", [])
+        self.testcase_setup_hooks = config.get("setup_hooks", [])
         # testcase teardown hooks
         self.testcase_teardown_hooks = config.get("teardown_hooks", [])
 
         self.http_client_session = http_client_session or HttpSession()
         self.session_context = SessionContext(config_variables)
 
-        if testcase_setup_hooks:
-            self.do_hook_actions(testcase_setup_hooks, "setup")
+    def execute_hooks(self):
+        if self.testcase_setup_hooks:
+            self.do_hook_actions(self.testcase_setup_hooks, "setup")
 
     def __del__(self):
         if self.testcase_teardown_hooks:
