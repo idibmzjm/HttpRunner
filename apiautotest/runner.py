@@ -256,12 +256,6 @@ class Runner(object):
         )
         resp_obj = response.ResponseObject(resp)
 
-        # teardown hooks
-        teardown_hooks = test_dict.get("teardown_hooks", [])
-        if teardown_hooks:
-            self.session_context.update_test_variables("response", resp_obj)
-            self.do_hook_actions(teardown_hooks, "teardown")
-
         # extract
         extractors = test_dict.get("extract", {})
         extracted_variables_mapping = resp_obj.extract_response(extractors)
@@ -296,6 +290,11 @@ class Runner(object):
 
         finally:
             self.validation_results = self.session_context.validation_results
+            # teardown hooks
+            teardown_hooks = test_dict.get("teardown_hooks", [])
+            if teardown_hooks:
+                self.session_context.update_test_variables("response", resp_obj)
+                self.do_hook_actions(teardown_hooks, "teardown")
 
     def _run_testcase(self, testcase_dict):
         """ run single testcase.
