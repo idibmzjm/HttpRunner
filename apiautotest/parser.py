@@ -827,7 +827,7 @@ def _extend_with_api(test_dict, api_def_dict):
     # merge & override setup_hooks
     def_setup_hooks = api_def_dict.pop("setup_hooks", [])
     ref_setup_hooks = test_dict.get("setup_hooks", [])
-    extended_setup_hooks = def_setup_hooks + ref_setup_hooks
+    extended_setup_hooks = ref_setup_hooks + def_setup_hooks
     if extended_setup_hooks:
         test_dict["setup_hooks"] = extended_setup_hooks
     # merge & override teardown_hooks
@@ -869,6 +869,18 @@ def _extend_with_testcase(test_dict, testcase_def_dict):
     test_name = test_dict.pop("name", None) \
         or testcase_def_dict["config"].pop("name", None) \
         or "testcase name undefined"
+
+    # merge & override setup_hooks and teardown_hooks
+    def_teardown_hooks = testcase_def_dict["config"].pop("teardown_hooks", [])
+    ref_teardown_hooks = test_dict.pop("teardown_hooks", [])
+    extended_teardown_hooks = def_teardown_hooks + ref_teardown_hooks
+    if extended_teardown_hooks:
+        testcase_def_dict["config"]["teardown_hooks"] = extended_teardown_hooks
+    def_setup_hooks = testcase_def_dict["config"].pop("setup_hooks", [])
+    ref_setup_hooks = test_dict.pop("setup_hooks", [])
+    extended_setup_hooks = ref_setup_hooks + def_setup_hooks
+    if extended_setup_hooks:
+        testcase_def_dict["config"]["setup_hooks"] = extended_setup_hooks
 
     # override testcase config name, output, etc.
     testcase_def_dict["config"].update(test_dict)

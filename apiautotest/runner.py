@@ -306,14 +306,19 @@ class Runner(object):
         test_runner = Runner(config, self.http_client_session)
 
         tests = testcase_dict.get("teststeps", [])
-
+        if test_runner.testcase_setup_hooks:
+            test_runner.execute_hooks()
         for index, test_dict in enumerate(tests):
 
+            test_dict.setdefault("variables", {})
+            test_runner.session_context.test_variables_mapping.update(test_dict["variables"])
             # override current teststep variables with former testcase output variables
             former_output_variables = self.session_context.test_variables_mapping
             if former_output_variables:
                 test_dict.setdefault("variables", {})
                 test_dict["variables"].update(former_output_variables)
+
+            test_dict["variables"].update(test_runner.session_context.test_variables_mapping)
 
             try:
                 test_runner.run_test(test_dict)
