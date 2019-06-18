@@ -3,6 +3,7 @@
 import ast
 import os
 import re
+import copy
 
 from apiautotest import exceptions, utils, validator
 from apiautotest.compat import basestring, builtin_str, numeric_types, str
@@ -13,6 +14,8 @@ dolloar_regex_compile = re.compile(r"\$\$")
 variable_regex_compile = re.compile(r"\$\{(\w+)\}|\$(\w+)")
 # function notation, e.g. ${func1($var_1, $var_3)}
 function_regex_compile = re.compile(r"\$\{(\w+)\(([\$\w\.\-/\s=,]*)\)\}")
+
+temp_extracted_set = set()
 
 
 def parse_string_value(str_value):
@@ -930,13 +933,14 @@ def __prepare_testcase_tests(tests, config, project_mapping, session_variables_s
         project_mapping (dict):
 
     """
+    global temp_extracted_set
     config_variables = config.get("variables", {})
     config_base_url = config.get("base_url", "")
     config_verify = config.get("verify", True)
     functions = project_mapping.get("functions", {})
 
     prepared_testcase_tests = []
-    session_variables_set = set(config_variables.keys()) | (session_variables_set or set())
+    session_variables_set = set(config_variables.keys()) | (session_variables_set or set()) | temp_extracted_set
     for test_dict in tests:
 
         teststep_variables_set = {"request", "response"}
@@ -992,10 +996,12 @@ def __prepare_testcase_tests(tests, config, project_mapping, session_variables_s
             test_dict["request"]["verify"] = config_verify
 
         # move extracted variable to session variables
-        if "extract" in test_dict:
+        if test_dict.get("extract", {}):
             extract_mapping = utils.ensure_mapping_format(test_dict["extract"])
             session_variables_set |= set(extract_mapping.keys())
+            temp_extracted_set |= session_variables_set
 
+        session_variables_set |= temp_extracted_set
         teststep_variables_set |= session_variables_set
 
         # convert validators to lazy function

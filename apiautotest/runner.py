@@ -7,6 +7,9 @@ from apiautotest.client import HttpSession
 from apiautotest.context import SessionContext
 
 
+tmp_extracted_variables = dict()
+
+
 class Runner(object):
     """ Running testcases.
 
@@ -200,6 +203,7 @@ class Runner(object):
             exceptions.ExtractFailure
 
         """
+        global tmp_extracted_variables
         # clear meta data first to ensure independence for each test
         self.__clear_test_data()
 
@@ -209,6 +213,8 @@ class Runner(object):
         # prepare
         test_dict = utils.lower_test_dict_keys(test_dict)
         test_variables = test_dict.get("variables", {})
+        # override variables use former extracted_variables
+        test_variables.update(tmp_extracted_variables)
         self.session_context.init_test_variables(test_variables)
 
         # teststep name
@@ -258,8 +264,11 @@ class Runner(object):
 
         # extract
         extractors = test_dict.get("extract", {})
-        extracted_variables_mapping = resp_obj.extract_response(extractors)
-        self.session_context.update_session_variables(extracted_variables_mapping)
+        if extractors:
+            extracted_variables_mapping = resp_obj.extract_response(extractors)
+            tmp_extracted_variables.update(extracted_variables_mapping)
+            self.session_context.update_session_variables(extracted_variables_mapping)
+        self.session_context.update_session_variables(tmp_extracted_variables)
 
         # validate
         validators = test_dict.get("validate") or test_dict.get("validators") or []
