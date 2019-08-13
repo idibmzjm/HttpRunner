@@ -23,6 +23,9 @@ def main_hrun():
         '--log-level', default='INFO',
         help="Specify logging level, default is INFO.")
     parser.add_argument(
+        '-env', '--environment', dest='environment',
+        help="load test、stage、production(prod)、development(dev) environment configuration file")
+    parser.add_argument(
         '--log-file',
         help="Write logs to specified file path.")
     parser.add_argument(
@@ -80,7 +83,7 @@ def main_hrun():
     )
     try:
         for path in args.testcase_paths:
-            runner.run(path, dot_env_path=args.dot_env_path)
+            runner.run(path, dot_env_path=args.dot_env_path, environment=args.environment)
     except Exception:
         logger.log_error("!!!!!!!!!! exception stage: {} !!!!!!!!!!".format(runner.exception_stage))
         raise

@@ -185,14 +185,19 @@ def load_dot_env_file(dot_env_path):
     with io.open(dot_env_path, 'r', encoding='utf-8') as fp:
         for line in fp:
             # maxsplit=1
-            if "=" in line:
-                variable, value = line.split("=", 1)
-            elif ":" in line:
-                variable, value = line.split(":", 1)
-            else:
-                raise exceptions.FileFormatError(".env format error")
+            if line and line != '\n' and line != '\r\n':
+                if "=" in line:
+                    variable, value = line.split("=", 1)
+                elif ":" in line:
+                    variable, value = line.split(":", 1)
+                elif line.startswith('#'):
+                    continue
+                else:
+                    raise exceptions.FileFormatError(".env format error")
 
-            env_variables_mapping[variable.strip()] = value.strip()
+                env_variables_mapping[variable.strip()] = value.strip()
+            else:
+                continue
 
     utils.set_os_environ(env_variables_mapping)
     return env_variables_mapping
@@ -660,7 +665,7 @@ def locate_debugtalk_py(start_path):
     return debugtalk_path
 
 
-def load_project_tests(test_path, dot_env_path=None):
+def load_project_tests(test_path, dot_env_path=None, environment=None):
     """ load api, testcases, .env, debugtalk.py functions.
         api/testcases folder is relative to project_working_directory
 
@@ -689,7 +694,20 @@ def load_project_tests(test_path, dot_env_path=None):
     # NOTICE:
     # environment variable maybe loaded in debugtalk.py
     # thus .env file should be loaded before loading debugtalk.py
-    dot_env_path = dot_env_path or os.path.join(project_working_directory, ".env")
+    file = ".env"
+    if environment == "stage":
+        file = ".env.stage"
+    elif environment == "prod" or environment == "production":
+        file = ".env.production"
+    elif environment == "dev" or environment == "development":
+        file = ".env.dev"
+    else:
+        environment = "test"
+
+    logger.log_info("execute in environment: {}".format(environment))
+
+    dot_env_path = dot_env_path or os.path.join(project_working_directory, file)
+    logger.log_info("configuration file is : {}".format(dot_env_path))
     project_mapping["env"] = load_dot_env_file(dot_env_path)
 
     if debugtalk_path:
@@ -709,7 +727,7 @@ def load_project_tests(test_path, dot_env_path=None):
     tests_def_mapping["PWD"] = project_working_directory
 
 
-def load_tests(path, dot_env_path=None):
+def load_tests(path, dot_env_path=None, environment=None):
     """ load testcases from file path, extend and merge with api/testcase definitions.
 
     Args:
@@ -770,7 +788,7 @@ def load_tests(path, dot_env_path=None):
     if not os.path.isabs(path):
         path = os.path.join(os.getcwd(), path)
 
-    load_project_tests(path, dot_env_path)
+    load_project_tests(path, dot_env_path, environment)
     tests_mapping = {
         "project_mapping": project_mapping
     }

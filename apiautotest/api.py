@@ -230,7 +230,7 @@ class apiautotest(object):
             for summary in self._summary["details"]
         ]
 
-    def run_path(self, path, dot_env_path=None, mapping=None):
+    def run_path(self, path, dot_env_path=None, mapping=None, environment=None):
         """ run testcase/testsuite file or folder.
 
         Args:
@@ -244,7 +244,7 @@ class apiautotest(object):
         """
         # load tests
         self.exception_stage = "load tests"
-        tests_mapping = loader.load_tests(path, dot_env_path)
+        tests_mapping = loader.load_tests(path, dot_env_path, environment)
         tests_mapping["project_mapping"]["test_path"] = path
 
         if mapping:
@@ -252,7 +252,7 @@ class apiautotest(object):
 
         return self.run_tests(tests_mapping)
 
-    def run(self, path_or_tests, dot_env_path=None, mapping=None):
+    def run(self, path_or_tests, dot_env_path=None, mapping=None, environment=None):
         """ main interface.
 
         Args:
@@ -262,7 +262,7 @@ class apiautotest(object):
 
         """
         if validator.is_testcase_path(path_or_tests):
-            return self.run_path(path_or_tests, dot_env_path, mapping)
+            return self.run_path(path_or_tests, dot_env_path, mapping, environment)
         elif validator.is_testcases(path_or_tests):
             return self.run_tests(path_or_tests)
         else:
