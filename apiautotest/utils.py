@@ -384,7 +384,7 @@ def print_info(info_mapping):
         if isinstance(value, (tuple, collections.deque)):
             continue
         elif isinstance(value, (dict, list)):
-            value = json.dumps(value)
+            value = json.dumps(value, ensure_ascii=False)
         elif value is None:
             value = "None"
 

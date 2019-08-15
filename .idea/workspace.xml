@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2ba2703-91b3-43ce-9f9d-6096b12e4ff6" name="Default Changelist" comment="">
-      <change beforePath="$USER_HOME$/SongGuoApiAutoTest/ebike-op-api/debugtalk.py" beforeDir="false" afterPath="$USER_HOME$/SongGuoApiAutoTest/ebike-op-api/debugtalk.py" afterDir="false" />
-      <change beforePath="$USER_HOME$/SongGuoApiAutoTest/ebike-op-api/testcases/test.yml" beforeDir="false" afterPath="$USER_HOME$/SongGuoApiAutoTest/ebike-op-api/testcases/test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/HttpRunner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HttpRunner.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiautotest/__about__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiautotest/__about__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiautotest/loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiautotest/loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiautotest/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiautotest/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -200,6 +195,8 @@
       <workItem from="1565587002385" duration="7249000" />
       <workItem from="1565778746816" duration="1946000" />
       <workItem from="1565869214485" duration="46000" />
+      <workItem from="1565869267969" duration="143000" />
+      <workItem from="1565869633271" duration="530000" />
     </task>
     <servers />
   </component>
