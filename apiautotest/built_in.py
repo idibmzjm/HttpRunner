@@ -154,6 +154,14 @@ def contained_by(check_value, expect_value):
     assert isinstance(expect_value, (list, tuple, dict, basestring))
     assert check_value in expect_value
 
+def exists(check_value, expect_value):
+    assert isinstance(check_value, dict)
+    assert check_value.get(expect_value, None) is not None
+
+def not_exists(check_value, expect_value):
+    assert isinstance(check_value, dict)
+    assert check_value.get(expect_value, None) is None
+
 def type_match(check_value, expect_value):
     def get_type(name):
         if isinstance(name, type):
