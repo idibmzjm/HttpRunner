@@ -66,7 +66,7 @@ def log_with_color(level):
     return wrapper
 
 
-log_debug = log_with_color("debug")
+log_debug = log_with_color("info")
 log_info = log_with_color("info")
 log_warning = log_with_color("warning")
 log_error = log_with_color("error")

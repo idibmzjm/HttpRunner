@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2ba2703-91b3-43ce-9f9d-6096b12e4ff6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HttpRunner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HttpRunner.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiautotest/__about__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiautotest/__about__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiautotest/built_in.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiautotest/built_in.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiautotest/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiautotest/logger.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,6 +125,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main-debug" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HttpRunner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main-debug.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="Python.FlaskServer">
       <module name="SongGuoApiAutoTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -181,6 +206,11 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main-debug" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -197,7 +227,19 @@
       <workItem from="1565869214485" duration="46000" />
       <workItem from="1565869267969" duration="143000" />
       <workItem from="1565869633271" duration="690000" />
-      <workItem from="1566276451358" duration="349000" />
+      <workItem from="1566276451358" duration="451000" />
+      <workItem from="1566303078468" duration="245000" />
+      <workItem from="1566303702023" duration="302000" />
+      <workItem from="1566305054147" duration="238000" />
+      <workItem from="1566355362803" duration="861000" />
+      <workItem from="1566898104725" duration="11353000" />
+      <workItem from="1566980010821" duration="236000" />
+      <workItem from="1566980258887" duration="3000" />
+      <workItem from="1566982989232" duration="16744000" />
+      <workItem from="1567065319713" duration="2695000" />
+      <workItem from="1568803923339" duration="3404000" />
+      <workItem from="1581155911384" duration="572000" />
+      <workItem from="1581156506078" duration="39000" />
     </task>
     <servers />
   </component>
@@ -235,5 +277,24 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apiautotest/parser.py</url>
+          <line>1025</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apiautotest/parser.py</url>
+          <line>998</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HttpRunner$main_debug.coverage" NAME="main-debug Coverage Results" MODIFIED="1566961918557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
