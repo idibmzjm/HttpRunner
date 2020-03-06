@@ -4,6 +4,7 @@ import time
 
 import requests
 import urllib3
+from urllib.parse import unquote
 import json
 from apiautotest import logger
 from apiautotest.utils import lower_dict_keys, omit_long_data
@@ -73,7 +74,8 @@ class HttpSession(requests.Session):
                     msg += "{:<16} : {}\n".format(key, json.dumps(value, sort_keys=True, separators=(',', ':'),
                                                                   ensure_ascii=False))
                 else:
-                    msg += "{:<16} : {}\n".format(key, repr(value))
+                    # url decoder
+                    msg += "{:<16} : {}\n".format(key, unquote(repr(value), 'utf-8'))
             logger.log_debug(msg)
 
         req_resp_dict = {
