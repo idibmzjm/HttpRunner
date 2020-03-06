@@ -4,6 +4,7 @@ import time
 
 import requests
 import urllib3
+import json
 from apiautotest import logger
 from apiautotest.utils import lower_dict_keys, omit_long_data
 from requests import Request, Response
@@ -30,6 +31,7 @@ class HttpSession(requests.Session):
     This is a slightly extended version of `python-request <http://python-requests.org>`_'s
     :py:class:`requests.Session` class and mostly this class works exactly the same.
     """
+
     def __init__(self, *args, **kwargs):
         super(HttpSession, self).__init__(*args, **kwargs)
         self.init_meta_data()
@@ -67,7 +69,11 @@ class HttpSession(requests.Session):
         def log_print(req_resp_dict, r_type):
             msg = "\n================== {} details ==================\n".format(r_type)
             for key, value in req_resp_dict[r_type].items():
-                msg += "{:<16} : {}\n".format(key, repr(value))
+                if isinstance(value, dict):
+                    msg += "{:<16} : {}\n".format(key, json.dumps(value, sort_keys=True, separators=(',', ':'),
+                                                                  ensure_ascii=False))
+                else:
+                    msg += "{:<16} : {}\n".format(key, repr(value))
             logger.log_debug(msg)
 
         req_resp_dict = {

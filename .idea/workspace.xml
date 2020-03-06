@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2ba2703-91b3-43ce-9f9d-6096b12e4ff6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/HttpRunner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HttpRunner.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiautotest/__about__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiautotest/__about__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiautotest/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiautotest/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiautotest/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/apiautotest/client.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -240,6 +237,9 @@
       <workItem from="1568803923339" duration="3404000" />
       <workItem from="1581155911384" duration="572000" />
       <workItem from="1581156506078" duration="39000" />
+      <workItem from="1581156590271" duration="119000" />
+      <workItem from="1583485652671" duration="430000" />
+      <workItem from="1583486114117" duration="54000" />
     </task>
     <servers />
   </component>
